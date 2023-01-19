@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6af59acc-68ed-4c37-b5a1-724c57d2f326" name="변경" comment="add a README darkdown file">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/Sword.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/SwordAbility.kt" afterDir="false" />
+    <list default="true" id="6af59acc-68ed-4c37-b5a1-724c57d2f326" name="변경" comment="the first stage for strong type in this plugin">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Option.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/CustomizedSword.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/CriticalSword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/CriticalSword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Swords.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/Sword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/Sword.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/SwordAbility.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/SwordAbility.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +122,18 @@
       <workItem from="1673604220390" duration="1982000" />
       <workItem from="1673684111717" duration="14582000" />
       <workItem from="1673704059754" duration="7268000" />
-      <workItem from="1673746294742" duration="8088000" />
+      <workItem from="1673746294742" duration="10500000" />
+      <workItem from="1673856184927" duration="13784000" />
+      <workItem from="1673877595735" duration="1462000" />
+      <workItem from="1673918483290" duration="2008000" />
+      <workItem from="1673953494638" duration="4696000" />
+      <workItem from="1674011886926" duration="7304000" />
+      <workItem from="1674026290945" duration="9000" />
+      <workItem from="1674026557021" duration="9319000" />
+      <workItem from="1674045435347" duration="4023000" />
+      <workItem from="1674050246319" duration="2214000" />
+      <workItem from="1674088527656" duration="197000" />
+      <workItem from="1674110938045" duration="6761000" />
     </task>
     <task id="LOCAL-00001" summary="add a README darkdown file">
       <created>1673584094351</created>
@@ -139,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673584094351</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="checked project files">
+      <created>1673758745865</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673758745865</updated>
+    </task>
+    <task id="LOCAL-00003" summary="the backend of the plugin was completed but not tested yet">
+      <created>1673759799863</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673759799864</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +175,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add a README darkdown file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a README darkdown file" />
+    <MESSAGE value="checked project files" />
+    <MESSAGE value="the backend of the plugin was completed but not tested yet" />
+    <MESSAGE value="the first stage for strong type in this plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="the first stage for strong type in this plugin" />
   </component>
 </project>

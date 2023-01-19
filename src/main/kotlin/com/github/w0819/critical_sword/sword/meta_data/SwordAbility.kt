@@ -1,5 +1,6 @@
 package com.github.w0819.critical_sword.sword.meta_data
 
+import com.github.w0819.critical_sword.plugin.CriticalSword
 import com.github.w0819.critical_sword.util.Util
 import io.github.monun.tap.config.Config
 import io.papermc.paper.enchantments.EnchantmentRarity
@@ -9,6 +10,10 @@ import org.bukkit.enchantments.Enchantment
 import org.bukkit.enchantments.EnchantmentTarget
 import org.bukkit.enchantments.EnchantmentWrapper
 import org.bukkit.entity.EntityCategory
+import org.bukkit.entity.LivingEntity
+import org.bukkit.entity.Player
+import org.bukkit.event.entity.EntityDamageByEntityEvent
+import org.bukkit.event.entity.EntityDamageEvent
 import org.bukkit.inventory.EquipmentSlot
 import org.bukkit.inventory.ItemStack
 
@@ -29,6 +34,9 @@ sealed class SwordAbility private constructor(name: String, val ingredients: Enc
         }
 
     }
+
+    abstract fun <T: EntityDamageByEntityEvent> abilityEffect(event: T, sword: Sword): List<EntityDamageEvent>
+    // the property of this function looks to need to be changed.
 
     sealed class EnchantingItem(vararg items: ItemStack): ArrayList<ItemStack>(items.toMutableList()) {
         class Lighting: EnchantingItem(ItemStack(Material.LIGHT))
@@ -63,20 +71,29 @@ sealed class SwordAbility private constructor(name: String, val ingredients: Enc
         override fun getName(): String = toString()
 
         override fun getMaxLevel(): Int = ConfigMaxLevel
-        override fun getDamageIncrease(level: Int, entityCategory: EntityCategory): Float = when(level) {
-            1 -> 7.0f
-            2 -> 10.0f
-            3 -> 13.0f
-            4 -> 15.0f
-            5 -> 20.0f
-            else -> 0.0f
-        }
+        override fun getDamageIncrease(level: Int, entityCategory: EntityCategory): Float = level * 1.9f
 
         override fun displayName(level: Int): Component = Component.text(
             """
-                
+                the light will strike the entities around the player!
+                |when the level upgrades, more entities will be shot
             """.trimIndent()
         )
+
+        override fun <T: EntityDamageByEntityEvent> abilityEffect(event: T, sword: Sword): List<EntityDamageEvent> {
+            val player = event.entity as Player
+            val loc = player.location
+            val world = loc.world
+            val level = sword.enchantments[this] ?: 0
+            val entities = Util.getEntitiesInArea(level, player)
+
+            return entities.map { entity ->
+                val location = entity.location
+                world.strikeLightningEffect(location)
+                EntityDamageEvent(entity, EntityDamageEvent.DamageCause.LIGHTNING, 4.0 + getDamageIncrease(level, EntityCategory.NONE))
+            }
+        }
+
     }
     class EXPLODING: SwordAbility("EXPLORING", EnchantingItem.Exploding()) {
         private companion object {
@@ -91,12 +108,26 @@ sealed class SwordAbility private constructor(name: String, val ingredients: Enc
 
         override fun getMaxLevel(): Int = ConfigMaxLevel
         override fun displayName(level: Int): Component = Component.text(
-            """
-                
+            """the entities around the player will be exploded and died
+                | when level upgrades, more entities will be exploded!
             """.trimIndent()
         )
 
-        override fun getDamageIncrease(level: Int, entityCategory: EntityCategory): Float = 1.0f
+        override fun getDamageIncrease(level: Int, entityCategory: EntityCategory): Float = level * 2.5f
+
+        override fun <T: EntityDamageByEntityEvent> abilityEffect(event: T, sword: Sword): List<EntityDamageEvent> {
+            val player = event.entity as Player
+            val loc = player.location
+            val world = loc.world
+            val level = sword.enchantments[this] ?: 0
+            val entities = Util.getEntitiesInArea(level, player)
+
+            return entities.map { entity ->
+                val powder = 4 + getDamageIncrease(level, EntityCategory.NONE)
+                world.createExplosion(loc, powder, true, true)
+                EntityDamageEvent(entity, EntityDamageEvent.DamageCause.BLOCK_EXPLOSION, getDamageIncrease(level, EntityCategory.NONE).toDouble())
+            }
+        }
     }
     class BREAKING: SwordAbility("BREAKING", EnchantingItem.Breaking()) {
         private companion object {
@@ -117,7 +148,16 @@ sealed class SwordAbility private constructor(name: String, val ingredients: Enc
             """.trimMargin()
         )
 
-        override fun getDamageIncrease(level: Int, entityCategory: EntityCategory): Float = 0.0f
+        override fun getDamageIncrease(level: Int, entityCategory: EntityCategory): Float = level * 1.1f
+        override fun <T: EntityDamageByEntityEvent> abilityEffect(event: T, sword: Sword): List<EntityDamageEvent> {
+            val player = event.entity as Player
+            val defender = event.damager as LivingEntity
+            val world = player.world
+            val level = sword.enchantments[this] ?: 0
+
+            Util.breakingBlocksWithArmorStand(world, player.location, defender.location, CriticalSword.instance /*fix this to change the property of super*/, 100.0 * level)
+            return listOf()
+        }
     }
     class FIRING: SwordAbility("FIRING", EnchantingItem.Firing()) {
         private companion object {
@@ -133,11 +173,26 @@ sealed class SwordAbility private constructor(name: String, val ingredients: Enc
         override fun getMaxLevel(): Int = ConfigMaxLevel
         override fun displayName(level: Int): Component = Component.text(
             """spread the fire into everywhere where who can fire stands
-                |when level upgrades, fire will spread more Broadly!
+                |when level upgrades, more entities will fire!
             """.trimMargin()
         )
 
-        override fun getDamageIncrease(level: Int, entityCategory: EntityCategory): Float = 0.0f
+        override fun getDamageIncrease(level: Int, entityCategory: EntityCategory): Float = level * 1.1f
+        override fun <T: EntityDamageByEntityEvent> abilityEffect(event: T, sword: Sword): List<EntityDamageEvent> {
+            val player = event.entity as Player
+            val world = player.world
+            val loc = player.location
+            val loc1 = loc.multiply(-1.0)
+            val entities = world.getNearbyLivingEntities(loc1, loc1.distance(loc), 20.0)
+            val level = sword.enchantments.filterKeys { it is FIRING }
+
+            return entities.map { entity ->
+                val location = entity.location.apply { y -= 1 }
+                location.block.type = Material.FIRE
+
+                EntityDamageEvent(entity, EntityDamageEvent.DamageCause.FIRE, 4.0 + getDamageIncrease(level[this]!!, EntityCategory.NONE) )
+            }
+        }
     }
 
     final override fun getActiveSlots(): MutableSet<EquipmentSlot> = mutableSetOf()

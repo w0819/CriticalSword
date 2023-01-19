@@ -1,15 +1,20 @@
 package com.github.w0819.critical_sword.sword.meta_data
 
+import com.github.w0819.critical_sword.plugin.CriticalSword
 import com.github.w0819.critical_sword.util.Util
+import io.github.monun.tap.fake.FakeEntity
 import org.bukkit.Location
 import org.bukkit.Material
-import org.bukkit.entity.Entity
-import org.bukkit.entity.EntityType
+import org.bukkit.Particle
 import org.bukkit.entity.Item
 import org.bukkit.entity.LightningStrike
 import org.bukkit.inventory.ItemStack
+import org.bukkit.scheduler.BukkitTask
 
 sealed class Sword (vanillaSword: VanillaSwordType) : ItemStack(vanillaSword) {
+
+    lateinit var spawnParticle: BukkitTask
+        private set
 
     sealed class VanillaSwordType(sword: ItemStack): ItemStack(sword) {
         class WoodenSword(vanSword: ItemStack): VanillaSwordType(vanSword)
@@ -64,15 +69,15 @@ sealed class Sword (vanillaSword: VanillaSwordType) : ItemStack(vanillaSword) {
             return sword
         }
 
-        fun swordCreation(swordItem: Item,sword: VanillaSwordType, enchantingItem: SwordAbility.EnchantingItem): Item {
+        fun swordCreation(swordItem: Item,sword: VanillaSwordType, enchantingItem: SwordAbility.EnchantingItem, plugin: CriticalSword): Item {
             val loc = swordItem.location
 
             val swordCreated = Sword(sword,enchantingItem)
-            return swordCreated.creationEffect(loc, swordCreated) as Item // if Cast Exception happened, mostly it happened here
+            return swordCreated.creationEffect(loc, plugin).bukkitEntity
         }
     }
 
-    private fun creationEffect(loc: Location, sword: Sword): Entity {
+    private fun creationEffect(loc: Location, plugin: CriticalSword): FakeEntity<Item> {
         val world = loc.world
 
         val fireLocs = listOf(
@@ -89,9 +94,14 @@ sealed class Sword (vanillaSword: VanillaSwordType) : ItemStack(vanillaSword) {
         }
         world.spawn(loc, LightningStrike::class.java)
 
-        return world.spawnEntity(loc, EntityType.DROPPED_ITEM).apply {
-            val item = this as? Item ?: return@apply
-            item.itemStack = sword
+        spawnParticle = plugin.bukkitScheduler.runTaskTimer(plugin, Runnable { world.spawnParticle(Particle.SOUL, loc, 3000)}, 0L, 1L)
+
+        return plugin.fakeServer.spawnItem(loc, this).apply {
+            location.apply {
+                yaw = 0.0f
+                pitch = - 90.0f
+                y -= 0.5
+            }
         }
     }
 
@@ -121,4 +131,10 @@ sealed class Sword (vanillaSword: VanillaSwordType) : ItemStack(vanillaSword) {
     class NetheriteSword(sword: VanillaSwordType.NetheriteSword) : Sword(sword)
 
     override fun toString(): String = this::class.simpleName!!
+
+    init {
+        itemMeta = itemMeta.apply {
+            isUnbreakable = true // the sword will not be broken
+        }
+    }
 }
