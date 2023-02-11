@@ -1,10 +1,12 @@
-description: "this is a plugin for the sword which gives critical damage to the animals and monsters and anything in the world even the player!"
-api-version: 1.19.3
-main: com.github.w0819.critical_sword.plugin.CriticalSword
+description: this is a plugin for the sword which gives critical damage to the animals and monsters and anything in near by player even him!
+api-version: 1.19
+main: com.github.w0819.critical_sword.plugin.SwordPlugin
 libraries:
-  - io.github.monun.kommand:kommand-core:2.14.0
-  - io.github.monun.tap:tap-core:4.16.0
+  - io.github.monun:kommand-core:3.0.0
+  - io.github.monun:tap-core:4.8.0
+  - org.jetbrains.kotlin:kotlin-stdlib:1.8.0
+  - org.jetbrains.kotlin:kotlin-reflect:1.8.0
 author: w0819
 name: Critical_Sword
-version: 0.0.1
+version: 0.0.2
 website: https://www.github.com/w0819

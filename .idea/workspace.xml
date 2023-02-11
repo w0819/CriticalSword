@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6af59acc-68ed-4c37-b5a1-724c57d2f326" name="변경" comment="the first stage for strong type in this plugin">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Option.kt" afterDir="false" />
+    <list default="true" id="6af59acc-68ed-4c37-b5a1-724c57d2f326" name="변경" comment="README.md update">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/SwordPlugin.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/SwordCreationEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/TrackingCancelEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/meta_data/Sword.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/meta_data/SwordAbility.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/storage/AbilityStorage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/tracker/StandMover.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/tracker/SwordTracker.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/CriticalSword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/CriticalSword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/Sword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/Sword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/SwordAbility.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/SwordAbility.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/CriticalSword.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/Sword.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/SwordAbility.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +54,12 @@
                 <item name="CriticalSword" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CriticalSword" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -52,13 +70,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Object" />
         <option value="Kotlin File" />
+        <option value="Kotlin Object" />
         <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -86,26 +109,112 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.qodana",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\build\libs" />
+      <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\.server\plugins" />
+      <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\.server\plugin" />
+      <recent name="C:\workingPlace\kotlinPlace\CriticalSword\.server\plugins" />
+      <recent name="C:\workingPlace\kotlinPlace\CriticalSword\.sever\plugins" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.github.w0819.critical_sword.util.meta_data" />
+      <recent name="com.github.w0819.critical_sword.util.scheduler" />
+      <recent name="com.github.w0819.critical_sword.util.customized_action" />
       <recent name="com.github.w0819.critical_sword.sword" />
     </key>
     <key name="KotlinExtractSuperclassDialog.RECENT_KEYS">
       <recent name="com.github.w0819.critical_sword.meta_data" />
     </key>
+  </component>
+  <component name="RunManager" selected="Gradle.CriticalSword [jar]">
+    <configuration name="CriticalSword [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CriticalSword [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CriticalSword [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testClasses" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CriticalSword [jar]" />
+        <item itemvalue="Gradle.CriticalSword [clean]" />
+        <item itemvalue="Gradle.CriticalSword [testClasses]" />
+        <item itemvalue="Gradle.CriticalSword [testClasses]" />
+        <item itemvalue="Gradle.CriticalSword [jar]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -133,7 +242,47 @@
       <workItem from="1674045435347" duration="4023000" />
       <workItem from="1674050246319" duration="2214000" />
       <workItem from="1674088527656" duration="197000" />
-      <workItem from="1674110938045" duration="6761000" />
+      <workItem from="1674110938045" duration="8721000" />
+      <workItem from="1674128666192" duration="468000" />
+      <workItem from="1674129380775" duration="3457000" />
+      <workItem from="1674302209464" duration="3234000" />
+      <workItem from="1674309857063" duration="4078000" />
+      <workItem from="1674391209472" duration="1828000" />
+      <workItem from="1674393781587" duration="996000" />
+      <workItem from="1674528176716" duration="2908000" />
+      <workItem from="1674637862688" duration="1404000" />
+      <workItem from="1674651828979" duration="6758000" />
+      <workItem from="1674691196844" duration="1031000" />
+      <workItem from="1674724627654" duration="8784000" />
+      <workItem from="1674785485362" duration="841000" />
+      <workItem from="1674802188056" duration="3432000" />
+      <workItem from="1674810176021" duration="7960000" />
+      <workItem from="1674831194455" duration="2083000" />
+      <workItem from="1674897635512" duration="2449000" />
+      <workItem from="1674901910172" duration="13390000" />
+      <workItem from="1674963483643" duration="4777000" />
+      <workItem from="1674970403623" duration="471000" />
+      <workItem from="1674971485856" duration="1246000" />
+      <workItem from="1674974245641" duration="795000" />
+      <workItem from="1674975745638" duration="3777000" />
+      <workItem from="1674980783311" duration="730000" />
+      <workItem from="1674982778122" duration="5209000" />
+      <workItem from="1674988306808" duration="842000" />
+      <workItem from="1674989424039" duration="1898000" />
+      <workItem from="1675068944363" duration="3109000" />
+      <workItem from="1675087507976" duration="1231000" />
+      <workItem from="1675473105764" duration="1501000" />
+      <workItem from="1675599400861" duration="3811000" />
+      <workItem from="1675678392334" duration="138000" />
+      <workItem from="1675688664674" duration="3961000" />
+      <workItem from="1675695647786" duration="2723000" />
+      <workItem from="1675733381152" duration="2579000" />
+      <workItem from="1675763417237" duration="1733000" />
+      <workItem from="1675914991521" duration="24515000" />
+      <workItem from="1676034403279" duration="1789000" />
+      <workItem from="1676091027044" duration="978000" />
+      <workItem from="1676105524330" duration="11662000" />
+      <workItem from="1676118588493" duration="401000" />
     </task>
     <task id="LOCAL-00001" summary="add a README darkdown file">
       <created>1673584094351</created>
@@ -156,11 +305,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673759799864</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="the second stage of this project was completed!&#10;&#10;## additions&#10;  - ### added implement event of sword abilities&#10;    - LIGHT: make the light will strike over the entities around player&#10;    - EXPLODING: explodes entities around player&#10;    - BREAKING: breaks the blocks upon player&#10;    - FIRING: fires entities around players&#10;  - ### make sure back end&#10;    - but I can't be sure that I didn't test it &#10; &#10; # Warning&#10; sorry, my condition is not enough to test this project.&#10; but I will test this project as soon as I can&#10; therefore you should be careful if you want to play this!">
+      <created>1674118691425</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674118691426</updated>
+    </task>
+    <task id="LOCAL-00005" summary="README.md update">
+      <created>1674119660423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674119660423</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -178,6 +344,13 @@
     <MESSAGE value="checked project files" />
     <MESSAGE value="the backend of the plugin was completed but not tested yet" />
     <MESSAGE value="the first stage for strong type in this plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="the first stage for strong type in this plugin" />
+    <MESSAGE value="the second stage of this project was completed!&#10;&#10;## additions&#10;  - ### added implement event of sword abilities&#10;    - LIGHT: make the light will strike over the entities around player&#10;    - EXPLODING: explodes entities around player&#10;    - BREAKING: breaks the blocks upon player&#10;    - FIRING: fires entities around players&#10;  - ### make sure back end&#10;    - but I can't be sure that I didn't test it" />
+    <MESSAGE value="the second stage of this project was completed!&#10;&#10;## additions&#10;  - ### added implement event of sword abilities&#10;    - LIGHT: make the light will strike over the entities around player&#10;    - EXPLODING: explodes entities around player&#10;    - BREAKING: breaks the blocks upon player&#10;    - FIRING: fires entities around players&#10;  - ### make sure back end&#10;    - but I can't be sure that I didn't test it &#10; &#10; # Warning&#10; sorry, my condition is not enough to test this project.&#10; but I will test this project as soon as I can&#10; therefore you should be careful if you want to play this!" />
+    <MESSAGE value="README.md update" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md update" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
