@@ -17,3 +17,4 @@ enma-e1541
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.tmp.driveupload

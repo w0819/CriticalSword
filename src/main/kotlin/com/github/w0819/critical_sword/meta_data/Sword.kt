@@ -1,17 +1,14 @@
-package com.github.w0819.critical_sword.util.meta_data
+package com.github.w0819.critical_sword.meta_data
 
+import com.github.w0819.critical_sword.meta_data.SwordAbility.Companion.abilities
 import com.github.w0819.critical_sword.plugin.SwordPlugin
 import com.github.w0819.critical_sword.util.Util.swords
-import com.github.w0819.critical_sword.util.meta_data.SwordAbility.Companion.abilities
 import com.github.w0819.critical_sword.util.storage.AbilityStorage
-import com.github.w0819.critical_sword.util.storage.AbilityStorage.Companion.abilityLevel
 import com.github.w0819.critical_sword.util.storage.AbilityStorage.Companion.hasAbility
-import io.papermc.paper.event.player.PlayerArmSwingEvent
 import org.bukkit.Particle
 import org.bukkit.enchantments.Enchantment
+import org.bukkit.entity.LivingEntity
 import org.bukkit.entity.Player
-import org.bukkit.event.entity.EntityDamageByEntityEvent
-import org.bukkit.inventory.EquipmentSlot
 import org.bukkit.inventory.ItemStack
 import org.bukkit.persistence.PersistentDataType
 
@@ -26,18 +23,17 @@ class Sword private constructor(val vanilla: ItemStack,private val abilities: Li
         fun ItemStack.isSwordType(): Boolean = type in swords
 
         fun ItemStack.isSword(): Boolean = abilities.all { ability -> isSwordType() && hasAbility(ability) }
+
         operator fun invoke(sword: ItemStack): Sword {
             require(sword.isSwordType())
             return Sword(sword, AbilityStorage(sword))
         }
 
-        operator fun invoke(sword: Sword, abilities: List<AbilityStorage>) = Sword(sword.vanilla, abilities)
-
-        fun ItemStack.update(): ItemStack =
+        fun Sword.updateToVanilla(): Sword =
             apply {
-                abilities.forEach { ability ->
-                    val level = abilityLevel(ability)
-                    itemMeta.persistentDataContainer.set(ability.key, PersistentDataType.INTEGER, level)
+                abilities.forEach { abilityStorage ->
+                    val (ability, level) = abilityStorage
+                    vanilla.itemMeta.persistentDataContainer.set(ability.key, PersistentDataType.INTEGER, level)
                 }
             }
     }
@@ -53,11 +49,10 @@ class Sword private constructor(val vanilla: ItemStack,private val abilities: Li
 
     init {
         vanilla.apply {
-            addEnchantment(Enchantment.DAMAGE_ALL, 1)
+            addEnchantment(Enchantment.DAMAGE_ALL, 1) // sharpness 1
             itemMeta = itemMeta.apply {
-                isUnbreakable = true
+                isUnbreakable = true // unbreakable
             }
-            update()
         }
     }
 
@@ -70,21 +65,19 @@ class Sword private constructor(val vanilla: ItemStack,private val abilities: Li
         val updatedAbilities = abilities.map { abilityStorage ->
             if (abilityStorage.ability == ability) abilityStorage.upgrade() else abilityStorage
         }
-        return Sword(vanilla, updatedAbilities)
+
+        return Sword(vanilla, updatedAbilities).apply { updateToVanilla() }
     }
 
-    fun swingEffect(e: PlayerArmSwingEvent) {
-        val player = e.player
-        if (e.hand == EquipmentSlot.HAND && player.inventory.itemInMainHand.isSword()) {
-            val loc = player.location
-            val world = player.world
+    fun swingEffect(player: Player ,plugin: SwordPlugin) {
+        val loc = player.location
+        val world = player.world
 
-            world.spawnParticle(Particle.SWEEP_ATTACK, loc, 10, 0.0, 0.0, 5.0, 100.0) // sweep_attack ^ ^ ^ 10 0 0 5 100 normal @a
-        }
+        world.spawnParticle(Particle.SWEEP_ATTACK, loc, 10, 0.0, 0.0, 5.0, 100.0)
+        if (hasAbilities.isNotEmpty()) hasAbilities.forEach { storage -> storage.ability.customAfterEffect(player, storage.level, plugin) }
     }
 
-    fun activeAbilityAfterEffect(e: EntityDamageByEntityEvent, player: Player, plugin: SwordPlugin) {
-        hasAbilities.forEach { abilityStorage ->  abilityStorage.run { ability.afterHitEntityEffect(player,level, plugin, e) } }
-    }
+    fun activeAbilityAfterEffect(target: LivingEntity, player: Player, plugin: SwordPlugin): List<AbilityStorage> =
+        hasAbilities.onEach { abilityStorage ->  abilityStorage.run { ability.afterHitEntityEffect(target ,player,level, plugin) } }
 
 }

@@ -17,12 +17,15 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.0")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.10")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 
-    implementation("io.papermc.paper:paper-api:1.19.3-R0.1-SNAPSHOT")
-    implementation("io.github.monun:kommand-api:3.0.0")
-    implementation("io.github.monun:tap-api:4.8.0")
+    implementation(dependencyNotation = "io.papermc.paper:paper-api:1.19.3-R0.1-SNAPSHOT")
+    implementation("io.github.monun:kommand-api:3.1.2")
+    implementation("io.github.monun:tap-api:4.9.2")
+    implementation("io.github.monun:heartbeat-coroutines:0.0.5")
+    implementation("io.github.monun:invfx-api:3.3.0")
 }
 
 tasks.test {

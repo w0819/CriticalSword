@@ -4,26 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6af59acc-68ed-4c37-b5a1-724c57d2f326" name="변경" comment="README.md update">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/SwordPlugin.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/SwordCreationEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/TrackingCancelEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/meta_data/Sword.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/meta_data/SwordAbility.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/storage/AbilityStorage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/tracker/StandMover.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/tracker/SwordTracker.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+    <list default="true" id="6af59acc-68ed-4c37-b5a1-724c57d2f326" name="변경" comment="Temporary">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/SwordAbility.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/projectile/ItemProjectile.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/EntityAndNearestEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/Radios.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/CriticalSword.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/Sword.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/sword/meta_data/SwordAbility.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/SwordPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/SwordPlugin.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/config_properties/ConfigProperties.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/config_properties/ConfigProperties.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/StandMovingCancelEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/SwordCreationEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/TrackingCancelEvent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/meta_data/Sword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/Sword.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/meta_data/SwordAbility.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/storage/AbilityStorage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/storage/AbilityStorage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/tracker/StandMover.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/tracker/SwordTracker.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +44,7 @@
           <activation />
         </task>
         <projects_view>
+          <option name="groupModules" value="false" />
           <tree_state>
             <expand>
               <path>
@@ -52,11 +54,18 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CriticalSword" type="f1a62948:ProjectNode" />
+                <item name="CriticalSword" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CriticalSword" type="f1a62948:ProjectNode" />
+                <item name="CriticalSword" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CriticalSword" type="f1a62948:ProjectNode" />
+                <item name="CriticalSword" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -72,6 +81,7 @@
       <list>
         <option value="Kotlin File" />
         <option value="Kotlin Object" />
+        <option value="package-info" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -109,34 +119,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.qodana",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\build\libs" />
+      <recent name="C:\Users\서성학\Dropbox" />
       <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\.server\plugins" />
+      <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\build\libs" />
       <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\.server\plugin" />
       <recent name="C:\workingPlace\kotlinPlace\CriticalSword\.server\plugins" />
-      <recent name="C:\workingPlace\kotlinPlace\CriticalSword\.sever\plugins" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.github.w0819.critical_sword.util.meta_data" />
-      <recent name="com.github.w0819.critical_sword.util.scheduler" />
-      <recent name="com.github.w0819.critical_sword.util.customized_action" />
-      <recent name="com.github.w0819.critical_sword.sword" />
+      <recent name="com.github.w0819.critical_sword.util" />
+      <recent name="com.github.w0819.critical_sword.util.tracker.sword_creation" />
+      <recent name="com.github.w0819.critical_sword.util.tracker.trident" />
+      <recent name="com.github.w0819.critical_sword.util.tracker.enma" />
+      <recent name="com.github.w0819.critical_sword.util.unit" />
     </key>
     <key name="KotlinExtractSuperclassDialog.RECENT_KEYS">
       <recent name="com.github.w0819.critical_sword.meta_data" />
@@ -283,6 +294,50 @@
       <workItem from="1676091027044" duration="978000" />
       <workItem from="1676105524330" duration="11662000" />
       <workItem from="1676118588493" duration="401000" />
+      <workItem from="1676119594376" duration="3617000" />
+      <workItem from="1676171190183" duration="12467000" />
+      <workItem from="1676194829269" duration="10774000" />
+      <workItem from="1676255585962" duration="8615000" />
+      <workItem from="1676286805251" duration="532000" />
+      <workItem from="1676294861368" duration="4163000" />
+      <workItem from="1676338882768" duration="13466000" />
+      <workItem from="1676424024602" duration="496000" />
+      <workItem from="1676444527988" duration="7534000" />
+      <workItem from="1676452509228" duration="380000" />
+      <workItem from="1676455958643" duration="6181000" />
+      <workItem from="1676504343469" duration="3391000" />
+      <workItem from="1676543831944" duration="3018000" />
+      <workItem from="1676644266792" duration="8286000" />
+      <workItem from="1676656431822" duration="6941000" />
+      <workItem from="1676705824847" duration="1897000" />
+      <workItem from="1676720045644" duration="9454000" />
+      <workItem from="1676777649864" duration="2360000" />
+      <workItem from="1676787233816" duration="563000" />
+      <workItem from="1676816512237" duration="509000" />
+      <workItem from="1676881316315" duration="889000" />
+      <workItem from="1676884278659" duration="929000" />
+      <workItem from="1676885426829" duration="855000" />
+      <workItem from="1676886943083" duration="3847000" />
+      <workItem from="1676891681164" duration="1291000" />
+      <workItem from="1676952593559" duration="3566000" />
+      <workItem from="1676963610156" duration="852000" />
+      <workItem from="1676977633358" duration="5597000" />
+      <workItem from="1676984676048" duration="5495000" />
+      <workItem from="1677117370259" duration="6114000" />
+      <workItem from="1677213565311" duration="2809000" />
+      <workItem from="1677224141004" duration="10913000" />
+      <workItem from="1677296815133" duration="9110000" />
+      <workItem from="1677462535262" duration="1128000" />
+      <workItem from="1677586448788" duration="739000" />
+      <workItem from="1677927505550" duration="2705000" />
+      <workItem from="1677935331688" duration="967000" />
+      <workItem from="1678455836263" duration="6889000" />
+      <workItem from="1678541571414" duration="4067000" />
+      <workItem from="1679056617568" duration="11163000" />
+      <workItem from="1679224172622" duration="4880000" />
+      <workItem from="1679303620577" duration="5946000" />
+      <workItem from="1679439420877" duration="142000" />
+      <workItem from="1679575780373" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="add a README darkdown file">
       <created>1673584094351</created>
@@ -319,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674119660423</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rebuild the project into the right version">
+      <created>1676120869307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676120869307</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +409,9 @@
     <MESSAGE value="the second stage of this project was completed!&#10;&#10;## additions&#10;  - ### added implement event of sword abilities&#10;    - LIGHT: make the light will strike over the entities around player&#10;    - EXPLODING: explodes entities around player&#10;    - BREAKING: breaks the blocks upon player&#10;    - FIRING: fires entities around players&#10;  - ### make sure back end&#10;    - but I can't be sure that I didn't test it" />
     <MESSAGE value="the second stage of this project was completed!&#10;&#10;## additions&#10;  - ### added implement event of sword abilities&#10;    - LIGHT: make the light will strike over the entities around player&#10;    - EXPLODING: explodes entities around player&#10;    - BREAKING: breaks the blocks upon player&#10;    - FIRING: fires entities around players&#10;  - ### make sure back end&#10;    - but I can't be sure that I didn't test it &#10; &#10; # Warning&#10; sorry, my condition is not enough to test this project.&#10; but I will test this project as soon as I can&#10; therefore you should be careful if you want to play this!" />
     <MESSAGE value="README.md update" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md update" />
+    <MESSAGE value="rebuild the project into the right version" />
+    <MESSAGE value="Temporary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Temporary" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

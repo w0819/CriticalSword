@@ -2,8 +2,10 @@ description: this is a plugin for the sword which gives critical damage to the a
 api-version: 1.19
 main: com.github.w0819.critical_sword.plugin.SwordPlugin
 libraries:
-  - io.github.monun:kommand-core:3.0.0
-  - io.github.monun:tap-core:4.8.0
+  - io.github.monun:kommand-core:3.1.1
+  - io.github.monun:tap-core:4.9.1
+  - io.github.monun:invfx-core:3.3.0
+  - org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4
   - org.jetbrains.kotlin:kotlin-stdlib:1.8.0
   - org.jetbrains.kotlin:kotlin-reflect:1.8.0
 author: w0819

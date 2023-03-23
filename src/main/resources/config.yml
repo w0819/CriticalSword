@@ -1,2 +1,24 @@
-enmaMaxLevel: 5
-isPrintDebugMessage: true
+config-properties:
+  print-debug-messages: true
+  start-the-test: false
+
+enma:
+  enma-max-level: 5
+  killing-area-x-length: 10.0
+  killing-area-y-length: 10.0
+  killing-area-z-length: 10.0
+  default-hit-ability-deep-length: 400.0
+  killing-area-radios:
+    x-length: 10.0
+    y-length: 10.0
+    z-length: 10.0
+Trident:
+  trident-max-level: 10
+  area-to-track-radios:
+    x-length: 40.0
+    y-length: 40.0
+    z-length: 40.0
+  sword-fake-entity-moving-delay: 100
+  speed-of-sword-landing: 10.0
+  delay-of-spawn-of-sword: 100
+  landing-length: 50.0

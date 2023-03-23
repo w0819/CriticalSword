@@ -1,20 +1,20 @@
 package com.github.w0819.critical_sword.util.storage
 
-import com.github.w0819.critical_sword.util.meta_data.Sword.Companion.isSwordType
-import com.github.w0819.critical_sword.util.meta_data.SwordAbility
+import com.github.w0819.critical_sword.meta_data.Sword.Companion.isSwordType
+import com.github.w0819.critical_sword.meta_data.SwordAbility
 import org.bukkit.inventory.ItemStack
 import org.bukkit.persistence.PersistentDataType
 
 /**
  *
  * */
-class AbilityStorage(val ability: SwordAbility, val level: Int) {
+data class AbilityStorage(val ability: SwordAbility, val level: Int) {
     companion object {
         operator fun invoke(sword: ItemStack): List<AbilityStorage> = SwordAbility.abilities.map { ability ->
             val level = sword.abilityLevel(ability)
             AbilityStorage(ability, level)
         }
-        fun ItemStack.abilityLevel(ability: SwordAbility): Int {
+        private fun ItemStack.abilityLevel(ability: SwordAbility): Int {
             require(isSwordType())
             return itemMeta.persistentDataContainer.get(ability.key, PersistentDataType.INTEGER) ?: 0
         }
