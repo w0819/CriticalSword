@@ -4,26 +4,191 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6af59acc-68ed-4c37-b5a1-724c57d2f326" name="변경" comment="Temporary">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/SwordAbility.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/projectile/ItemProjectile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/EntityAndNearestEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/Radios.kt" afterDir="false" />
+    <list default="true" id="d97ce94b-4d6a-4819-b8cd-4ee110cbda66" name="변경" comment="dd">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/SwordAbility.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/abilities/Enma.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/abilities/Trident.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/abilities/potion/Poisoning.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/storage/AbilityStorage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/storage/SwordDataStorage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/able/Leveling.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/able/Multivariable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/config/ConfigUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/manager/event/ArmorItemGetter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/manager/event/SwordUseByUserHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/manager/finder/EntityNearByNear.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/manager/finder/ItemSearcher.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/schedule/projectile/SwordThrow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/XYZ.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2303" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2307" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2309" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2313" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2317" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2321" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2325" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2329" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2331" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2335" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2337" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2341" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2345" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2349" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2353" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2357" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2361" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2365" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2369" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2373" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2375" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2377" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2381" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2385" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2389" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2393" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2395" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2399" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2403" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2407" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2411" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2413" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2417" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2421" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2425" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2427" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2431" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2435" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2437" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2441" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2445" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2449" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2453" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2457" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2459" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2463" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2467" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2469" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2471" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2475" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2479" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2483" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2487" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2491" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2495" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2497" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2501" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2505" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2507" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2511" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2513" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2517" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2521" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2525" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2529" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2533" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2537" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2539" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2543" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2545" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2549" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2553" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2559" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2561" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2565" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2569" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2573" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2577" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2581" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2583" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2587" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2591" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2595" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2597" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2601" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2605" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2609" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2611" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2615" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2619" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2623" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2627" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2629" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2633" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2637" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2639" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2643" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2647" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2651" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2655" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2657" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2661" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2665" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2667" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2669" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2673" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2677" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2679" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2683" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2687" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2691" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2693" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2697" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2701" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2703" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2707" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2709" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2711" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2715" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2719" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2723" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2727" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2729" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2735" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2739" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2741" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2743" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2747" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2751" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2755" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2757" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2761" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2765" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2769" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2771" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2775" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2779" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2781" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2785" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2789" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2793" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2797" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2801" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2803" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2807" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2809" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2813" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2817" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2821" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2825" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/Sword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/Sword.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/SwordAbility.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/SwordPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/SwordPlugin.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/config_properties/ConfigProperties.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/config_properties/ConfigProperties.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/StandMovingCancelEvent.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/SwordCreationEvent.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/events/TrackingCancelEvent.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/meta_data/Sword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/Sword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/meta_data/SwordAbility.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/storage/AbilityStorage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/storage/AbilityStorage.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/tracker/StandMover.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/tracker/SwordTracker.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/config_properties/ConfigProperties.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/storage/AbilityStorage.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/EntityAndNearestEntity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/Radios.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/Radios.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
@@ -31,6 +196,12 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -44,7 +215,6 @@
           <activation />
         </task>
         <projects_view>
-          <option name="groupModules" value="false" />
           <tree_state>
             <expand>
               <path>
@@ -54,18 +224,11 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CriticalSword" type="f1a62948:ProjectNode" />
-                <item name="CriticalSword" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CriticalSword" type="f1a62948:ProjectNode" />
-                <item name="CriticalSword" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CriticalSword" type="f1a62948:ProjectNode" />
-                <item name="CriticalSword" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -79,19 +242,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Object" />
-        <option value="package-info" />
         <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -113,8 +269,7 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectId" id="2KD1TYz0oUnsyY5m0zN4ZF8jBge" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2R08hVzI2lLan0hahtq9yvkeiQ7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -123,58 +278,36 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;terrible__version&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/서성학/Dropbox&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\서성학\Dropbox" />
+      <recent name="C:\Users\서성학\Dropbox'" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\.server\plugins" />
-      <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\build\libs" />
-      <recent name="C:\Users\서성학\Desktop\CodingProjects\CriticalSword\.server\plugin" />
-      <recent name="C:\workingPlace\kotlinPlace\CriticalSword\.server\plugins" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.github.w0819.critical_sword.util" />
-      <recent name="com.github.w0819.critical_sword.util.tracker.sword_creation" />
-      <recent name="com.github.w0819.critical_sword.util.tracker.trident" />
-      <recent name="com.github.w0819.critical_sword.util.tracker.enma" />
-      <recent name="com.github.w0819.critical_sword.util.unit" />
-    </key>
-    <key name="KotlinExtractSuperclassDialog.RECENT_KEYS">
-      <recent name="com.github.w0819.critical_sword.meta_data" />
+      <recent name="com.github.w0819.critical_sword.meta_data.ability.storage" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CriticalSword [jar]">
-    <configuration name="CriticalSword [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="CriticalSword [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -194,35 +327,11 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CriticalSword [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="testClasses" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CriticalSword [jar]" />
-        <item itemvalue="Gradle.CriticalSword [clean]" />
-        <item itemvalue="Gradle.CriticalSword [testClasses]" />
-        <item itemvalue="Gradle.CriticalSword [testClasses]" />
         <item itemvalue="Gradle.CriticalSword [jar]" />
       </list>
     </recent_temporary>
@@ -230,191 +339,56 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="6af59acc-68ed-4c37-b5a1-724c57d2f326" name="변경" comment="" />
-      <created>1673494358966</created>
+      <changelist id="d97ce94b-4d6a-4819-b8cd-4ee110cbda66" name="변경" comment="" />
+      <created>1686375772768</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1673494358966</updated>
-      <workItem from="1673494359752" duration="899000" />
-      <workItem from="1673495533050" duration="15786000" />
-      <workItem from="1673533591381" duration="1217000" />
-      <workItem from="1673582483048" duration="4595000" />
-      <workItem from="1673604220390" duration="1982000" />
-      <workItem from="1673684111717" duration="14582000" />
-      <workItem from="1673704059754" duration="7268000" />
-      <workItem from="1673746294742" duration="10500000" />
-      <workItem from="1673856184927" duration="13784000" />
-      <workItem from="1673877595735" duration="1462000" />
-      <workItem from="1673918483290" duration="2008000" />
-      <workItem from="1673953494638" duration="4696000" />
-      <workItem from="1674011886926" duration="7304000" />
-      <workItem from="1674026290945" duration="9000" />
-      <workItem from="1674026557021" duration="9319000" />
-      <workItem from="1674045435347" duration="4023000" />
-      <workItem from="1674050246319" duration="2214000" />
-      <workItem from="1674088527656" duration="197000" />
-      <workItem from="1674110938045" duration="8721000" />
-      <workItem from="1674128666192" duration="468000" />
-      <workItem from="1674129380775" duration="3457000" />
-      <workItem from="1674302209464" duration="3234000" />
-      <workItem from="1674309857063" duration="4078000" />
-      <workItem from="1674391209472" duration="1828000" />
-      <workItem from="1674393781587" duration="996000" />
-      <workItem from="1674528176716" duration="2908000" />
-      <workItem from="1674637862688" duration="1404000" />
-      <workItem from="1674651828979" duration="6758000" />
-      <workItem from="1674691196844" duration="1031000" />
-      <workItem from="1674724627654" duration="8784000" />
-      <workItem from="1674785485362" duration="841000" />
-      <workItem from="1674802188056" duration="3432000" />
-      <workItem from="1674810176021" duration="7960000" />
-      <workItem from="1674831194455" duration="2083000" />
-      <workItem from="1674897635512" duration="2449000" />
-      <workItem from="1674901910172" duration="13390000" />
-      <workItem from="1674963483643" duration="4777000" />
-      <workItem from="1674970403623" duration="471000" />
-      <workItem from="1674971485856" duration="1246000" />
-      <workItem from="1674974245641" duration="795000" />
-      <workItem from="1674975745638" duration="3777000" />
-      <workItem from="1674980783311" duration="730000" />
-      <workItem from="1674982778122" duration="5209000" />
-      <workItem from="1674988306808" duration="842000" />
-      <workItem from="1674989424039" duration="1898000" />
-      <workItem from="1675068944363" duration="3109000" />
-      <workItem from="1675087507976" duration="1231000" />
-      <workItem from="1675473105764" duration="1501000" />
-      <workItem from="1675599400861" duration="3811000" />
-      <workItem from="1675678392334" duration="138000" />
-      <workItem from="1675688664674" duration="3961000" />
-      <workItem from="1675695647786" duration="2723000" />
-      <workItem from="1675733381152" duration="2579000" />
-      <workItem from="1675763417237" duration="1733000" />
-      <workItem from="1675914991521" duration="24515000" />
-      <workItem from="1676034403279" duration="1789000" />
-      <workItem from="1676091027044" duration="978000" />
-      <workItem from="1676105524330" duration="11662000" />
-      <workItem from="1676118588493" duration="401000" />
-      <workItem from="1676119594376" duration="3617000" />
-      <workItem from="1676171190183" duration="12467000" />
-      <workItem from="1676194829269" duration="10774000" />
-      <workItem from="1676255585962" duration="8615000" />
-      <workItem from="1676286805251" duration="532000" />
-      <workItem from="1676294861368" duration="4163000" />
-      <workItem from="1676338882768" duration="13466000" />
-      <workItem from="1676424024602" duration="496000" />
-      <workItem from="1676444527988" duration="7534000" />
-      <workItem from="1676452509228" duration="380000" />
-      <workItem from="1676455958643" duration="6181000" />
-      <workItem from="1676504343469" duration="3391000" />
-      <workItem from="1676543831944" duration="3018000" />
-      <workItem from="1676644266792" duration="8286000" />
-      <workItem from="1676656431822" duration="6941000" />
-      <workItem from="1676705824847" duration="1897000" />
-      <workItem from="1676720045644" duration="9454000" />
-      <workItem from="1676777649864" duration="2360000" />
-      <workItem from="1676787233816" duration="563000" />
-      <workItem from="1676816512237" duration="509000" />
-      <workItem from="1676881316315" duration="889000" />
-      <workItem from="1676884278659" duration="929000" />
-      <workItem from="1676885426829" duration="855000" />
-      <workItem from="1676886943083" duration="3847000" />
-      <workItem from="1676891681164" duration="1291000" />
-      <workItem from="1676952593559" duration="3566000" />
-      <workItem from="1676963610156" duration="852000" />
-      <workItem from="1676977633358" duration="5597000" />
-      <workItem from="1676984676048" duration="5495000" />
-      <workItem from="1677117370259" duration="6114000" />
-      <workItem from="1677213565311" duration="2809000" />
-      <workItem from="1677224141004" duration="10913000" />
-      <workItem from="1677296815133" duration="9110000" />
-      <workItem from="1677462535262" duration="1128000" />
-      <workItem from="1677586448788" duration="739000" />
-      <workItem from="1677927505550" duration="2705000" />
-      <workItem from="1677935331688" duration="967000" />
-      <workItem from="1678455836263" duration="6889000" />
-      <workItem from="1678541571414" duration="4067000" />
-      <workItem from="1679056617568" duration="11163000" />
-      <workItem from="1679224172622" duration="4880000" />
-      <workItem from="1679303620577" duration="5946000" />
-      <workItem from="1679439420877" duration="142000" />
-      <workItem from="1679575780373" duration="257000" />
+      <updated>1686375772768</updated>
+      <workItem from="1686375811476" duration="4503000" />
+      <workItem from="1686394363660" duration="6677000" />
+      <workItem from="1686408020344" duration="3837000" />
+      <workItem from="1686442739680" duration="13931000" />
+      <workItem from="1686486878314" duration="3922000" />
+      <workItem from="1688122260783" duration="3898000" />
+      <workItem from="1688130491706" duration="1764000" />
+      <workItem from="1688133258556" duration="1208000" />
+      <workItem from="1688135100008" duration="1912000" />
+      <workItem from="1688188529457" duration="35162000" />
+      <workItem from="1688732346308" duration="118000" />
+      <workItem from="1688785556881" duration="779000" />
+      <workItem from="1688786459838" duration="2241000" />
+      <workItem from="1688798225633" duration="22923000" />
+      <workItem from="1688910678597" duration="4219000" />
+      <workItem from="1688988368710" duration="4958000" />
+      <workItem from="1689067538851" duration="5786000" />
+      <workItem from="1689075740833" duration="1060000" />
     </task>
-    <task id="LOCAL-00001" summary="add a README darkdown file">
-      <created>1673584094351</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1673584094351</updated>
-    </task>
-    <task id="LOCAL-00002" summary="checked project files">
-      <created>1673758745865</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1673758745865</updated>
-    </task>
-    <task id="LOCAL-00003" summary="the backend of the plugin was completed but not tested yet">
-      <created>1673759799863</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1673759799864</updated>
-    </task>
-    <task id="LOCAL-00004" summary="the second stage of this project was completed!&#10;&#10;## additions&#10;  - ### added implement event of sword abilities&#10;    - LIGHT: make the light will strike over the entities around player&#10;    - EXPLODING: explodes entities around player&#10;    - BREAKING: breaks the blocks upon player&#10;    - FIRING: fires entities around players&#10;  - ### make sure back end&#10;    - but I can't be sure that I didn't test it &#10; &#10; # Warning&#10; sorry, my condition is not enough to test this project.&#10; but I will test this project as soon as I can&#10; therefore you should be careful if you want to play this!">
-      <created>1674118691425</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1674118691426</updated>
-    </task>
-    <task id="LOCAL-00005" summary="README.md update">
-      <created>1674119660423</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1674119660423</updated>
-    </task>
-    <task id="LOCAL-00006" summary="rebuild the project into the right version">
-      <created>1676120869307</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1676120869307</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="terrible_version" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add a README darkdown file" />
-    <MESSAGE value="checked project files" />
-    <MESSAGE value="the backend of the plugin was completed but not tested yet" />
-    <MESSAGE value="the first stage for strong type in this plugin" />
-    <MESSAGE value="the second stage of this project was completed!&#10;&#10;## additions&#10;  - ### added implement event of sword abilities&#10;    - LIGHT: make the light will strike over the entities around player&#10;    - EXPLODING: explodes entities around player&#10;    - BREAKING: breaks the blocks upon player&#10;    - FIRING: fires entities around players&#10;  - ### make sure back end&#10;    - but I can't be sure that I didn't test it" />
-    <MESSAGE value="the second stage of this project was completed!&#10;&#10;## additions&#10;  - ### added implement event of sword abilities&#10;    - LIGHT: make the light will strike over the entities around player&#10;    - EXPLODING: explodes entities around player&#10;    - BREAKING: breaks the blocks upon player&#10;    - FIRING: fires entities around players&#10;  - ### make sure back end&#10;    - but I can't be sure that I didn't test it &#10; &#10; # Warning&#10; sorry, my condition is not enough to test this project.&#10; but I will test this project as soon as I can&#10; therefore you should be careful if you want to play this!" />
-    <MESSAGE value="README.md update" />
-    <MESSAGE value="rebuild the project into the right version" />
-    <MESSAGE value="Temporary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Temporary" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

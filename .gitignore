@@ -1,6 +1,6 @@
 .gradle
 build/
-.idea
+.idea/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -18,3 +18,5 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .tmp.driveupload
+build
+.tmp
