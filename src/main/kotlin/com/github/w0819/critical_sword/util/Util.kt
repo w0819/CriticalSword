@@ -1,110 +1,80 @@
 package com.github.w0819.critical_sword.util
 
-import com.github.w0819.critical_sword.plugin.CriticalSword
+import com.github.w0819.critical_sword.util.unit.XYZ
+import io.github.monun.heartbeat.coroutines.Suspension
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.format.TextColor
 import org.bukkit.Location
-import org.bukkit.Material
+import org.bukkit.NamespacedKey
 import org.bukkit.World
-import org.bukkit.entity.ArmorStand
 import org.bukkit.entity.Entity
+import org.bukkit.entity.Item
 import org.bukkit.entity.LivingEntity
-import org.bukkit.entity.Player
-import org.bukkit.util.Vector
-import kotlin.math.pow
+import java.util.jar.JarFile
+import kotlin.reflect.full.createInstance
 
-object Util  {
-    val calculatorArea = { level: Int -> (level.toDouble() * 10).pow(2).toInt()}
+object Util {
+    val halfRange: (Int) -> IntRange = { size ->
+        -(size / 2)..size / 2
+    }
 
-    val Vanilla = listOf(
-        Material.WOODEN_SWORD,
-        Material.STONE_SWORD,
-        Material.IRON_SWORD,
-        Material.DIAMOND_SWORD,
-        Material.NETHERITE_SWORD
-    )
-    fun <T> List<T>.tail(): List<T> = if (isNotEmpty()) dropLast(1) else this
-
-    val calculateLength:(level: Int) -> Double = { level ->
-        when (level) {
-            0 -> 0.0
-            else -> (level * 10).toDouble()
+    fun String.toNamespacedKey(): NamespacedKey {
+        val lowerCase = lowercase()
+        val key = lowerCase.fold("") { acc, c ->
+            acc + if (c == ' ') '_' else c
         }
-    }
-    fun getEntitiesInArea(level: Int, player: Player): List<Entity> {
-        val loc = player.location
-        val world = loc.world
 
-        return world.getNearbyLivingEntities(loc, calculateLength(level) , 256.0).toList()
+        return NamespacedKey.minecraft(key)
     }
 
+    fun successMessage(message: String): Component = Component.text(message).color(TextColor.color(0, 255, 0))
+    fun failMessage(message: String): Component = Component.text(message).color(TextColor.color(255,0,0))
 
-    /**
-     * this makes plane with two points
-     * @receiver it is a point of a line
-     * @param loc is a point of a line either
-     * @exception IllegalArgumentException if neither two points is not on a single line in case of plane
-     * */
-    operator fun Location.rangeTo(loc: Location): List<List<Location>> {
-        require(x == loc.x || y == loc.y || z == loc.z)
-        return (x.toInt()..loc.x.toInt()).map { x ->
-            (z.toInt()..loc.z.toInt()).flatMap { z ->
-                (y.toInt()..loc.y.toInt()).map { y ->
-                    Location(world, x.toDouble(), y.toDouble(), z.toDouble())
-                }
-            }
+    @JvmStatic
+    fun load(pkg: String): List<Any> {
+        val jarFile = JarFile(this::class.java.protectionDomain.codeSource.location.path)
+        val entries = jarFile.entries()
+        return entries.toList().map {
+            it.name
+        }.filter {
+            it.startsWith("$pkg.".replace(".", "/")) && it.endsWith(".class")
+        }.map {
+            Class.forName(it.replace("/", ".").removeSuffix(".class"))
+        }.filter { clazz ->
+            !clazz.isSynthetic && !clazz.isAnonymousClass && !clazz.isEnum && !clazz.isInterface && !clazz.isMemberClass
+        }.map { clazz -> clazz.kotlin}.filter { kClass ->
+            !kClass.isCompanion && !kClass.isAbstract && !kClass.isOpen && !kClass.isFun && kClass.isFinal
+        }.map { kClass ->
+            kClass.objectInstance ?: kClass.createInstance()
         }
     }
 
-    /**
-     * summon invisible armor stand in a line and breaking the blocks to move them
-     * */
-
-    fun breakingBlocksWithArmorStand(world: World, loc1: Location, loc2: Location, plugin: CriticalSword, deep: Double) {
-        val slope = loc2.subtract(loc1).toVector() // vector to that armor going
-        val armorLocs = (loc1.add(Location(world, -30.0, 0.0, 5.0))..loc1.add(Location(world, 30.0, 3.0, 5.0))) // range of that armor stands
-
-
-        armorLocs.forEach {  sameXAndY ->
-            sameXAndY.forEach { blockLoc ->
-                val block = blockLoc.block
-                block.breakNaturally()
-            }
+    infix fun ClosedRange<Double>.step(step: Double): Iterable<Double> {
+        require(start.isFinite())
+        require(endInclusive.isFinite())
+        require(step > 0.0) { "Step must be positive, was: $step." }
+        val sequence = generateSequence(start) { previous ->
+            if (previous == Double.POSITIVE_INFINITY) return@generateSequence null
+            val next = previous + step
+            if (next > endInclusive) null else next
         }
-
-        val armorStands  = armorLocs[0].map { armorLoc -> // ^-30 ^ ^5 ^30 ^3 ^5 air
-            world.spawn(armorLoc, ArmorStand::class.java).apply {
-                isVisible = false
-                setCanMove(true)
-                setGravity(false)
-            }
-        }
-        val armorMoving: (ArmorStand) -> (Vector) -> Runnable = { stand ->
-            { standVector ->
-                Runnable {
-                    stand.location.let { standLoc ->
-                        val standWorld = standLoc.world
-                        (standLoc..standLoc.add(Location(standWorld, 0.0, 5.0, 0.0))).flatten().forEach { it.block.breakNaturally() }
-                        standLoc.add(standVector)
-                    }
-                }
-            }
-        }
-        armorStands.forEach { armorStand ->
-            val periodToArrive = deep / slope.length() + (deep % slope.length())
-            plugin.bukkitScheduler.apply {
-                val task  = runTaskTimer(plugin, armorMoving(armorStand)(slope), 0L, 1L)
-                runTaskLater(plugin, Runnable { cancelTask(task.taskId) }, periodToArrive.toLong())
-            }
-        }
-        // later it will be seperated into two pieces which part is breaking and the other part is damaging entity
-        // for now, the damaging entity part is not available
+        return sequence.asIterable()
     }
 
-    inline fun <reified T: LivingEntity> killEntitiesAroundTheEntity(entity: T, width: Double, length: Double) {
-        val world = entity.world
-        val loc = entity.location
-        val kill: (T) -> Unit = { livingEntity ->
-            livingEntity.damage(livingEntity.health)
-        }
-        world.getNearbyLivingEntities(loc, width, length).filterIsInstance<T>().forEach(kill)
+    fun LivingEntity.kill(by: Entity): LivingEntity = apply { damage(health, by) }
+
+    suspend fun <T> waiting(times: Int,wait: Long,target: T,p: (T) -> Boolean, task: ((Int) -> Unit)? = null): Boolean {
+        tailrec suspend fun waiting(done: Int): Boolean = if (done != times) {
+            if (!p(target)) false else {
+                task?.let { it(done) }.run { Suspension().delay(wait) }
+                waiting(done + 1)
+            }
+        } else true
+
+        return waiting(0)
     }
+
+    fun getNearbyEntitiesByTypeInRadios(world: World, loc: Location, triple: XYZ) = triple.let { (xRadios, yRadios, zRadios) -> world.getNearbyEntitiesByType(Item::class.java,loc ,xRadios, yRadios, zRadios) }.toList()
+
+    fun Any.simpleName(): String = this::class.simpleName ?: ""
 }

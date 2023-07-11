@@ -1,10 +1,11 @@
 .gradle
 build/
-.idea
+.idea/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 enma-e1541
+.server
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
@@ -16,3 +17,6 @@ enma-e1541
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+.tmp.driveupload
+build
+.tmp
