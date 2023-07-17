@@ -5,191 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d97ce94b-4d6a-4819-b8cd-4ee110cbda66" name="변경" comment="dd">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/SwordAbility.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/abilities/Enma.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/abilities/Trident.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/abilities/potion/Poisoning.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/storage/AbilityStorage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/ability/storage/SwordDataStorage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/able/Leveling.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/able/Multivariable.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/config/ConfigUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/manager/event/ArmorItemGetter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/manager/event/SwordUseByUserHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/manager/finder/EntityNearByNear.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/manager/finder/ItemSearcher.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/schedule/projectile/SwordThrow.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/XYZ.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2303" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2307" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2309" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2313" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2317" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2321" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2325" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2329" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2331" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2335" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2337" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2341" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2345" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2349" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2353" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2357" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2361" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2365" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2369" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2373" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2375" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2377" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2381" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2385" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2389" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2393" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2395" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2399" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2403" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2407" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2411" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2413" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2417" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2421" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2425" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2427" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2431" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2435" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2437" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2441" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2445" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2449" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2453" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2457" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2459" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2463" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2467" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2469" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2471" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2475" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2479" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2483" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2487" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2491" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2495" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2497" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2501" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2505" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2507" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2511" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2513" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2517" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2521" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2525" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2529" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2533" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2537" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2539" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2543" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2545" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2549" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2553" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2559" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2561" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2565" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2569" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2573" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2577" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2581" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2583" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2587" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2591" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2595" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2597" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2601" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2605" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2609" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2611" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2615" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2619" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2623" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2627" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2629" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2633" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2637" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2639" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2643" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2647" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2651" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2655" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2657" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2661" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2665" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2667" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2669" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2673" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2677" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2679" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2683" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2687" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2691" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2693" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2697" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2701" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2703" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2707" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2709" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2711" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2715" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2719" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2723" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2727" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2729" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2735" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2739" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2741" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2743" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2747" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2751" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2755" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2757" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2761" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2765" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2769" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2771" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2775" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2779" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2781" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2785" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2789" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2793" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2797" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2801" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2803" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2807" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2809" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2813" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2817" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2821" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp.driveupload/2825" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/event/SwordEvent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/Sword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/Sword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/meta_data/SwordAbility.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/SwordPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/plugin/SwordPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/Util.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/config_properties/ConfigProperties.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/storage/AbilityStorage.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/EntityAndNearestEntity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/Radios.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/w0819/critical_sword/util/unit/Radios.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,17 +40,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CriticalSword" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CriticalSword" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CriticalSword" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -258,7 +66,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="29bb8639-6030-4a0e-8494-3eedd8dd13d9" />
+        <option name="accountId" value="fc8efdd5-4d84-4ffb-aeb3-f11e539fea80" />
         <option name="url" value="https://github.com/w0819/CriticalSword.git" />
       </UrlAndAccount>
     </option>
@@ -270,31 +78,32 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2R08hVzI2lLan0hahtq9yvkeiQ7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;terrible__version&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/서성학/Dropbox&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "terrible__version",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/서성학/Dropbox",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\서성학\Dropbox" />
@@ -362,6 +171,7 @@
       <workItem from="1688988368710" duration="4958000" />
       <workItem from="1689067538851" duration="5786000" />
       <workItem from="1689075740833" duration="1060000" />
+      <workItem from="1689556796589" duration="383000" />
     </task>
     <servers />
   </component>
